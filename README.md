@@ -35,7 +35,3 @@ Export the pandas DataFrames as CSV files:
 ```powershell
 .\.venv\Scripts\python.exe weather_app.py "Tokyo" --days 10 --export
 ```
-
-## Data Source
-
-This app uses the free Open-Meteo geocoding and forecast APIs.
