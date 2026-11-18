@@ -17,6 +17,11 @@ A terminal weather app that searches for a location, fetches live forecast data 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
+pytest is also included in `requirements.txt`:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
 
 ## Run
 
@@ -34,4 +39,20 @@ Export the pandas DataFrames as CSV files:
 
 ```powershell
 .\.venv\Scripts\python.exe weather_app.py "Tokyo" --days 10 --export
+```
+
+## Tests
+
+The pytest tests are in `py_tests/`. They cover weather-code descriptions, invalid command-line options, missing location matches, and network errors.
+
+Run the complete test suite:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q
+```
+
+Run only the weather-app tests:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q .\py_tests\test_weather_app.py
 ```
